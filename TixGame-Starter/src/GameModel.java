@@ -4,13 +4,27 @@
  * You should implement the public interface methods below
  */
 public class GameModel {
+    private int[][] board;
+    private int length;
 
     /**
      * Construct a game with given sizexsize
      * @param sz the square size of the board
      */
     public GameModel(int sz) {
+        length  = sz;
+        board = new int [sz][sz];
+        emptyBoard(sz);
 
+    }
+
+    private void emptyBoard(int size){
+        for(int i = 0; i<size; i++){
+            for(int m = 0; m < size; m++){
+                board[i][m] = 0;
+            }
+        }
+        printBoard();
     }
 
 
@@ -21,9 +35,11 @@ public class GameModel {
      * @return true if row, col is empty, false o.w.
      */
     public boolean canPlay(int row, int col) {
+        int spot = board[row][col];
+        if(spot == 0){return true;}
 
         //placeholder
-        return true;
+        return false;
     }
 
     /**
@@ -34,6 +50,8 @@ public class GameModel {
      * @return true if the game is over and false otherwise
      */
     public boolean makePlay(int row, int col, int player) {
+        board[row][col] = player;
+        printBoard();
 
         //placeholder
         return false;
@@ -45,6 +63,13 @@ public class GameModel {
      * Not required and can be deleted if you want
      */
     private void printBoard() {
+        for(int i = 0; i < length; i++){
+            for(int m = 0; m < length; m++){
+                int spot = board[i][m];
+                System.out.print(spot + " ");
+            }
+            System.out.println();
+        }
 
     }
 
