@@ -6,6 +6,7 @@
 public class GameModel {
     private int[][] board;
     private int length;
+    private FullLine fullLine;
 
     /**
      * Construct a game with given sizexsize
@@ -15,6 +16,7 @@ public class GameModel {
         length  = sz;
         board = new int [sz][sz];
         emptyBoard(sz);
+        fullLine = new FullLine(length);
 
     }
 
@@ -53,8 +55,10 @@ public class GameModel {
         board[row][col] = player;
         printBoard();
 
+        return fullLine.makeMove(player, col, row);
+
         //placeholder
-        return false;
+        //return false;
     }
 
 
