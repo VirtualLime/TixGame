@@ -38,37 +38,39 @@ public class FullLine {
     private boolean checkNeighbours(int place, int r, int c, int p){
         //if p == -1 && any r == size - 1 and has a spot of 1, return true
         //if p == 1 && any c == size-1 and has a pot of 1, return true
+        if(p==1 && c == size  && board[r][c].getSpot()==1 && board[r][c].getPlayer() == 1){return true;}
+        if(p==-1 && r == size  && board[r][c].getSpot()==1 && board[r][c].getPlayer() == -1){return true;}
         boolean finished = false;
         if(r - 1 >= 0){
             if(board[r-1][c].getPlayer() == p){
                 if(board[r-1][c].getSpot() < place){
-                    checkNeighbours(board[r-1][c].getSpot(), r-1, c, p);
+                    finished = checkNeighbours(board[r-1][c].getSpot(), r-1, c, p);
                 }
                 if(board[r-1][c].getSpot() > place){
                     board[r-1][c].setSpot(place);
-                    checkNeighbours(place, r-1, c, p);
+                    finished = checkNeighbours(place, r-1, c, p);
                 }
             }
         }
         if(c - 1 >= 0){
             if(board[r][c-1].getPlayer() == p){
                 if(board[r][c-1].getSpot() < place){
-                    checkNeighbours(board[r][c-1].getSpot(), r, c-1, p);
+                    finished = checkNeighbours(board[r][c-1].getSpot(), r, c-1, p);
                 }
                 if(board[r][c-1].getSpot() > place){
                     board[r][c-1].setSpot(place);
-                    checkNeighbours(place, r, c-1, p);
+                    finished = checkNeighbours(place, r, c-1, p);
                 }
             }
         }
         if(r - 1 >= 0 && c+1 < size){
             if(board[r-1][c+1].getPlayer() == p){
                 if(board[r-1][c+1].getSpot() < place){
-                    checkNeighbours(board[r-1][c].getSpot(), r-1, c+1, p);
+                    finished = checkNeighbours(board[r-1][c].getSpot(), r-1, c+1, p);
                 }
                 if(board[r-1][c+1].getSpot() > place){
                     board[r-1][c+1].setSpot(place);
-                    checkNeighbours(place, r-1, c+1, p);
+                    finished = checkNeighbours(place, r-1, c+1, p);
                 }
             }
             if(board[r-1][c+1].getPlayer() ==p && p == 1 && c+1 == size -1 &&
@@ -77,11 +79,11 @@ public class FullLine {
         if(c+1 < size){
             if(board[r][c+1].getPlayer() == p){
                 if(board[r][c+1].getSpot() < place){
-                    checkNeighbours(board[r][c+1].getSpot(), r, c+1, p);
+                    finished = checkNeighbours(board[r][c+1].getSpot(), r, c+1, p);
                 }
                 if(board[r][c+1].getSpot() > place){
                     board[r][c+1].setSpot(place);
-                    checkNeighbours(place, r, c+1, p);
+                    finished = checkNeighbours(place, r, c+1, p);
                 }
             }
             if(board[r][c+1].getPlayer() ==p && p == 1 && c+1 == size -1 &&
@@ -90,11 +92,11 @@ public class FullLine {
         if(r+1 < size){
             if(board[r+1][c].getPlayer() == p){
                 if(board[r+1][c].getSpot() < place){
-                    checkNeighbours(board[r+1][c].getSpot(), r+1, c, p);
+                    finished = checkNeighbours(board[r+1][c].getSpot(), r+1, c, p);
                 }
                 if(board[r+1][c].getSpot() > place){
                     board[r+1][c].setSpot(place);
-                    checkNeighbours(place, r+1, c, p);
+                    finished = checkNeighbours(place, r+1, c, p);
                 }
             }
             if(board[r+1][c].getPlayer() ==p && p == -1 && r+1 == size -1 &&
@@ -103,11 +105,11 @@ public class FullLine {
         if(r+1 < size && c-1 >= 0){
             if(board[r+1][c-1].getPlayer() == p){
                 if(board[r+1][c-1].getSpot() < place){
-                    checkNeighbours(board[r+1][c-1].getSpot(), r+1, c-1, p);
+                    finished = checkNeighbours(board[r+1][c-1].getSpot(), r+1, c-1, p);
                 }
                 if(board[r+1][c-1].getSpot() > place){
                     board[r+1][c-1].setSpot(place);
-                    checkNeighbours(place, r+1, c-1, p);
+                    finished = checkNeighbours(place, r+1, c-1, p);
                 }
             }
             if(board[r+1][c-1].getPlayer() ==p && p == -1 && r+1 == size -1 &&
