@@ -146,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583284006520</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Possible fixed &quot;winning&quot; mechanism">
+      <created>1583321397015</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1583321397015</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,6 +172,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Very small changes. First required method working, algorithm started on paper." />
     <MESSAGE value="added some new classes and methods to determine if a winning solution had been achieved. Not the correct solution." />
-    <option name="LAST_COMMIT_MESSAGE" value="added some new classes and methods to determine if a winning solution had been achieved. Not the correct solution." />
+    <MESSAGE value="Possible fixed &quot;winning&quot; mechanism" />
+    <option name="LAST_COMMIT_MESSAGE" value="Possible fixed &quot;winning&quot; mechanism" />
   </component>
 </project>

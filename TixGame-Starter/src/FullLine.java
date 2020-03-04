@@ -41,82 +41,126 @@ public class FullLine {
         if(p==1 && c == size  && board[r][c].getSpot()==1 && board[r][c].getPlayer() == 1){return true;}
         if(p==-1 && r == size  && board[r][c].getSpot()==1 && board[r][c].getPlayer() == -1){return true;}
         boolean finished = false;
-        if(r - 1 >= 0){
-            if(board[r-1][c].getPlayer() == p){
-                if(board[r-1][c].getSpot() < place){
-                    finished = checkNeighbours(board[r-1][c].getSpot(), r-1, c, p);
+        if (r - 1 >= 0) {
+            if (board[r - 1][c].getPlayer() == p) {
+                if (board[r - 1][c].getSpot() < place) {
+                    board[r][c].setSpot(board[r - 1][c].getSpot());
+                    finished = checkNeighbours(board[r][c].getSpot(), r, c, p);
+                    if(finished){return finished;}
+                    //finished = checkNeighbours(board[r-1][c].getSpot(), r-1, c, p);
                 }
-                if(board[r-1][c].getSpot() > place){
-                    board[r-1][c].setSpot(place);
-                    finished = checkNeighbours(place, r-1, c, p);
-                }
-            }
-        }
-        if(c - 1 >= 0){
-            if(board[r][c-1].getPlayer() == p){
-                if(board[r][c-1].getSpot() < place){
-                    finished = checkNeighbours(board[r][c-1].getSpot(), r, c-1, p);
-                }
-                if(board[r][c-1].getSpot() > place){
-                    board[r][c-1].setSpot(place);
-                    finished = checkNeighbours(place, r, c-1, p);
+                if (board[r - 1][c].getSpot() > place) {
+                    board[r - 1][c].setSpot(place);
+                    finished = checkNeighbours(place, r - 1, c, p);
+                    if(finished){return finished;}
                 }
             }
         }
-        if(r - 1 >= 0 && c+1 < size){
-            if(board[r-1][c+1].getPlayer() == p){
-                if(board[r-1][c+1].getSpot() < place){
-                    finished = checkNeighbours(board[r-1][c].getSpot(), r-1, c+1, p);
+        if (c - 1 >= 0) {
+            if (board[r][c - 1].getPlayer() == p) {
+                if (board[r][c - 1].getSpot() < place) {
+                    board[r][c].setSpot(board[r][c - 1].getSpot());
+                    finished = checkNeighbours(board[r][c].getSpot(), r, c, p);
+                    if(finished){return finished;}
+                    //finished = checkNeighbours(board[r][c-1].getSpot(), r, c-1, p);
                 }
-                if(board[r-1][c+1].getSpot() > place){
-                    board[r-1][c+1].setSpot(place);
-                    finished = checkNeighbours(place, r-1, c+1, p);
-                }
-            }
-            if(board[r-1][c+1].getPlayer() ==p && p == 1 && c+1 == size -1 &&
-                    board[r-1][c+1].getSpot() == 1){printBoard(); System.out.println("True");return true;}
-        }
-        if(c+1 < size){
-            if(board[r][c+1].getPlayer() == p){
-                if(board[r][c+1].getSpot() < place){
-                    finished = checkNeighbours(board[r][c+1].getSpot(), r, c+1, p);
-                }
-                if(board[r][c+1].getSpot() > place){
-                    board[r][c+1].setSpot(place);
-                    finished = checkNeighbours(place, r, c+1, p);
+                if (board[r][c - 1].getSpot() > place) {
+                    board[r][c - 1].setSpot(place);
+                    finished = checkNeighbours(place, r, c - 1, p);
+                    if(finished){return finished;}
                 }
             }
-            if(board[r][c+1].getPlayer() ==p && p == 1 && c+1 == size -1 &&
-                    board[r][c+1].getSpot() == 1){printBoard(); System.out.println("True");return true;}
         }
-        if(r+1 < size){
-            if(board[r+1][c].getPlayer() == p){
-                if(board[r+1][c].getSpot() < place){
-                    finished = checkNeighbours(board[r+1][c].getSpot(), r+1, c, p);
+        if (r - 1 >= 0 && c + 1 < size) {
+            if (board[r - 1][c + 1].getPlayer() == p) {
+                if (board[r - 1][c + 1].getSpot() < place) {
+                    board[r][c].setSpot(board[r - 1][c + 1].getSpot());
+                    finished = checkNeighbours(board[r][c].getSpot(), r, c, p);
+                    if(finished){return finished;}
+                    // finished = checkNeighbours(board[r-1][c].getSpot(), r-1, c+1, p);
                 }
-                if(board[r+1][c].getSpot() > place){
-                    board[r+1][c].setSpot(place);
-                    finished = checkNeighbours(place, r+1, c, p);
+                if (board[r - 1][c + 1].getSpot() > place) {
+                    board[r - 1][c + 1].setSpot(place);
+                    finished = checkNeighbours(place, r - 1, c + 1, p);
+                    if(finished){return finished;}
                 }
             }
-            if(board[r+1][c].getPlayer() ==p && p == -1 && r+1 == size -1 &&
-                    board[r+1][c].getSpot() == 1){printBoard(); System.out.println("True");return true;}
+            if (board[r - 1][c + 1].getPlayer() == p && p == 1 && c + 1 == size - 1 &&
+                    board[r - 1][c + 1].getSpot() == 1) {
+                printBoard();
+                System.out.println("True");
+                return true;
+            }
         }
-        if(r+1 < size && c-1 >= 0){
-            if(board[r+1][c-1].getPlayer() == p){
-                if(board[r+1][c-1].getSpot() < place){
-                    finished = checkNeighbours(board[r+1][c-1].getSpot(), r+1, c-1, p);
+        if (c + 1 < size) {
+            if (board[r][c + 1].getPlayer() == p) {
+                if (board[r][c + 1].getSpot() < place) {
+                    board[r][c].setSpot(board[r][c + 1].getSpot());
+                    finished = checkNeighbours(board[r][c].getSpot(), r, c, p);
+                    if(finished){return finished;}
+                    //finished = checkNeighbours(board[r][c+1].getSpot(), r, c+1, p);
                 }
-                if(board[r+1][c-1].getSpot() > place){
-                    board[r+1][c-1].setSpot(place);
-                    finished = checkNeighbours(place, r+1, c-1, p);
+                if (board[r][c + 1].getSpot() > place) {
+                    board[r][c + 1].setSpot(place);
+                    finished = checkNeighbours(place, r, c + 1, p);
+                    if(finished){return finished;}
                 }
             }
-            if(board[r+1][c-1].getPlayer() ==p && p == -1 && r+1 == size -1 &&
-                    board[r+1][c-1].getSpot() == 1){printBoard();System.out.println("True");return true;}
+            if (board[r][c + 1].getPlayer() == p && p == 1 && c + 1 == size - 1 &&
+                    board[r][c + 1].getSpot() == 1) {
+                printBoard();
+                System.out.println("True");
+                return true;
+            }
         }
-        if(r == size - 1 && p == -1 && board[r][c].getSpot() == 1){return true;}
-        if(c == size - 1 && p == 1 && board[r][c].getSpot() == 1){return true;}
+        if (r + 1 < size) {
+            if (board[r + 1][c].getPlayer() == p) {
+                if (board[r + 1][c].getSpot() < place) {
+                    board[r][c].setSpot(board[r + 1][c].getSpot());
+                    finished = checkNeighbours(board[r][c].getSpot(), r, c, p);
+                    if(finished){return finished;}
+                    //finished = checkNeighbours(board[r+1][c].getSpot(), r+1, c, p);
+                }
+                if (board[r + 1][c].getSpot() > place) {
+                    board[r + 1][c].setSpot(place);
+                    finished = checkNeighbours(place, r + 1, c, p);
+                    if(finished){return finished;}
+                }
+            }
+            if (board[r + 1][c].getPlayer() == p && p == -1 && r + 1 == size - 1 &&
+                    board[r + 1][c].getSpot() == 1) {
+                printBoard();
+                System.out.println("True");
+                return true;
+            }
+        }
+        if (r + 1 < size && c - 1 >= 0) {
+            if (board[r + 1][c - 1].getPlayer() == p) {
+                if (board[r + 1][c - 1].getSpot() < place) {
+                    board[r][c].setSpot(board[r + 1][c - 1].getSpot());
+                    finished = checkNeighbours(board[r][c].getSpot(), r, c, p);
+                    if(finished){return finished;}
+                    // finished = checkNeighbours(board[r+1][c-1].getSpot(), r+1, c-1, p);
+                }
+                if (board[r + 1][c - 1].getSpot() > place) {
+                    board[r + 1][c - 1].setSpot(place);
+                    finished = checkNeighbours(place, r + 1, c - 1, p);
+                    if(finished){return finished;}
+                }
+            }
+            if (board[r + 1][c - 1].getPlayer() == p && p == -1 && r + 1 == size - 1 &&
+                    board[r + 1][c - 1].getSpot() == 1) {
+                printBoard();
+                System.out.println("True");
+                return true;
+            }
+        }
+        if (r == size - 1 && p == -1 && board[r][c].getSpot() == 1) {
+            return true;
+        }
+        if (c == size - 1 && p == 1 && board[r][c].getSpot() == 1) {
+            return true;
+        }
         printBoard();
 
         return finished;
