@@ -12,4 +12,8 @@ public class Pair {
     public void setPlayer(int p){player = p;}
     public void setSpot(int s){spot = s;}
 
+    public String toString(){
+        return player + " " + spot;
+    }
+
 }

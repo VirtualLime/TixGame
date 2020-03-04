@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9cf7966-73bb-4231-94ec-7a2c7c44fb17" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/FullLine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pair.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FullLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FullLine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pair.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -134,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583182216515</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added some new classes and methods to determine if a winning solution had been achieved. Not the correct solution.">
+      <created>1583275821243</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583275821243</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,6 +158,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Very small changes. First required method working, algorithm started on paper." />
-    <option name="LAST_COMMIT_MESSAGE" value="Very small changes. First required method working, algorithm started on paper." />
+    <MESSAGE value="added some new classes and methods to determine if a winning solution had been achieved. Not the correct solution." />
+    <option name="LAST_COMMIT_MESSAGE" value="added some new classes and methods to determine if a winning solution had been achieved. Not the correct solution." />
   </component>
 </project>
