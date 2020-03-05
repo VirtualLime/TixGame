@@ -91,7 +91,7 @@ public class FullLineByTree {
                 }
             }
             if (column - 1 >= 0) {
-                if(board[row-1][column].getPlayer()==p){
+                if(board[row][column-1].getPlayer()==p){
                     if(!foundTree && !board[row][column].getTree().replaced){
                         board[row][column].setTreeName(board[row][column-1].getTreeName());
                         board[row][column].setTree(board[row][column-1].getTree());
@@ -250,7 +250,7 @@ public class FullLineByTree {
                 }
             }
             if (row + 1 < size && column + 1 < size) {
-                if(board[row-1][column].getPlayer()==p){
+                if(board[row+1][column+1].getPlayer()==p){
                     if(!foundTree && !board[row][column].getTree().replaced){
                         board[row][column].setTreeName(board[row+1][column+1].getTreeName());
                         board[row][column].setTree(board[row+1][column+1].getTree());
@@ -303,7 +303,7 @@ public class FullLineByTree {
                 }
             }
             if (column + 1 < size) {
-                if(board[row-1][column].getPlayer()==p){
+                if(board[row][column+1].getPlayer()==p){
                     if(!foundTree && !board[row][column].getTree().replaced){
                         board[row][column].setTreeName(board[row][column+1].getTreeName());
                         board[row][column].setTree(board[row][column+1].getTree());
@@ -410,7 +410,7 @@ public class FullLineByTree {
             }
         }
             if (column - 1 >= 0) {
-                if(board[row-1][column].getPlayer()==p){
+                if(board[row][column-1].getPlayer()==p){
                     if(!foundTree && !board[row][column].getTree().replaced){
                         board[row][column].setTreeName(board[row][column-1].getTreeName());
                         board[row][column].setTree(board[row][column-1].getTree());
@@ -569,7 +569,7 @@ public class FullLineByTree {
                 }
             }
             if (row + 1 < size && column + 1 < size) {
-                if(board[row-1][column].getPlayer()==p){
+                if(board[row+1][column+1].getPlayer()==p){
                     if(!foundTree && !board[row][column].getTree().replaced){
                         board[row][column].setTreeName(board[row+1][column+1].getTreeName());
                         board[row][column].setTree(board[row+1][column+1].getTree());
@@ -622,7 +622,7 @@ public class FullLineByTree {
                 }
             }
             if (column + 1 < size) {
-                if(board[row-1][column].getPlayer()==p){
+                if(board[row][column+1].getPlayer()==p){
                     if(!foundTree && !board[row][column].getTree().replaced){
                         board[row][column].setTreeName(board[row][column+1].getTreeName());
                         board[row][column].setTree(board[row][column+1].getTree());
