@@ -69,6 +69,7 @@ public class UnionTree {
     }
 
     public boolean haveAWinner(){
+        System.out.println("count: " + count);
         if(count == size){System.out.println("Winner!");return true;}
         return false;
     }

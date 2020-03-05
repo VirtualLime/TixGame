@@ -83,7 +83,7 @@ public class FullLineByTree {
                             }
                             UnionTree thisTree = board[row][column].getTree();
                             thisTree.replaceRC(r,c);
-                            tree.add(row);
+                            tree.addArray(thisTree.getArray());
                             //board[row][column].setTreeName();
                             if(tree.haveAWinner()){return true;}
                         }
@@ -136,7 +136,7 @@ public class FullLineByTree {
                             }
                             UnionTree thisTree = board[row][column].getTree();
                             thisTree.replaceRC(r,c);
-                            tree.add(row);
+                            tree.addArray(thisTree.getArray());
                             //board[row][column].setTreeName();
                             if(tree.haveAWinner()){return true;}
                         }
@@ -189,7 +189,7 @@ public class FullLineByTree {
                             }
                             UnionTree thisTree = board[row][column].getTree();
                             thisTree.replaceRC(r,c);
-                            tree.add(row);
+                            tree.addArray(thisTree.getArray());
                             //board[row][column].setTreeName();
                             if(tree.haveAWinner()){return true;}
                         }
@@ -242,7 +242,7 @@ public class FullLineByTree {
                             }
                             UnionTree thisTree = board[row][column].getTree();
                             thisTree.replaceRC(r,c);
-                            tree.add(row);
+                            tree.addArray(thisTree.getArray());
                             //board[row][column].setTreeName();
                             if(tree.haveAWinner()){return true;}
                         }
@@ -295,7 +295,7 @@ public class FullLineByTree {
                             }
                             UnionTree thisTree = board[row][column].getTree();
                             thisTree.replaceRC(r,c);
-                            tree.add(row);
+                            tree.addArray(thisTree.getArray());
                             //board[row][column].setTreeName();
                             if(tree.haveAWinner()){return true;}
                         }
@@ -348,7 +348,7 @@ public class FullLineByTree {
                             }
                             UnionTree thisTree = board[row][column].getTree();
                             thisTree.replaceRC(r,c);
-                            tree.add(row);
+                            tree.addArray(thisTree.getArray());
                             //board[row][column].setTreeName();
                             if(tree.haveAWinner()){return true;}
                         }
@@ -402,7 +402,7 @@ public class FullLineByTree {
                         }
                         UnionTree thisTree = board[row][column].getTree();
                         thisTree.replaceRC(r,c);
-                        tree.add(row);
+                        tree.addArray(thisTree.getArray());
                         //board[row][column].setTreeName();
                         if(tree.haveAWinner()){return true;}
                     }
@@ -455,7 +455,7 @@ public class FullLineByTree {
                             }
                             UnionTree thisTree = board[row][column].getTree();
                             thisTree.replaceRC(r,c);
-                            tree.add(row);
+                            tree.addArray(thisTree.getArray());
                             //board[row][column].setTreeName();
                             if(tree.haveAWinner()){return true;}
                         }
@@ -508,7 +508,7 @@ public class FullLineByTree {
                             }
                             UnionTree thisTree = board[row][column].getTree();
                             thisTree.replaceRC(r,c);
-                            tree.add(row);
+                            tree.addArray(thisTree.getArray());
                             //board[row][column].setTreeName();
                             if(tree.haveAWinner()){return true;}
                         }
@@ -561,7 +561,7 @@ public class FullLineByTree {
                             }
                             UnionTree thisTree = board[row][column].getTree();
                             thisTree.replaceRC(r,c);
-                            tree.add(row);
+                            tree.addArray(thisTree.getArray());
                             //board[row][column].setTreeName();
                             if(tree.haveAWinner()){return true;}
                         }
@@ -614,7 +614,7 @@ public class FullLineByTree {
                             }
                             UnionTree thisTree = board[row][column].getTree();
                             thisTree.replaceRC(r,c);
-                            tree.add(row);
+                            tree.addArray(thisTree.getArray());
                             //board[row][column].setTreeName();
                             if(tree.haveAWinner()){return true;}
                         }
@@ -667,7 +667,7 @@ public class FullLineByTree {
                             }
                             UnionTree thisTree = board[row][column].getTree();
                             thisTree.replaceRC(r,c);
-                            tree.add(row);
+                            tree.addArray(thisTree.getArray());
                             //board[row][column].setTreeName();
                             if(tree.haveAWinner()){return true;}
                         }
