@@ -11,13 +11,14 @@ public class UnionTree {
     public UnionTree(int s, int r, int c, int p, int pl){
         player = pl;
         parent = p;
-        count = 0;
+        count = 1;
         size = s;
         spot = new int[size];
         replaced = false;
         replacement = "";
         row = r;
         column = c;
+        spot[p-1] = p;
     }
 
     public void addArray(int[] arr){

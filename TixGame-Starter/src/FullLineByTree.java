@@ -47,7 +47,7 @@ public class FullLineByTree {
                         board[row][column].setTree(board[row-1][column].getTree());
                         board[row][column].setPlayer(p);
                         UnionTree tree = board[row][column].getTree();
-                        tree.add(row);
+                        tree.add(row+1);
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
@@ -66,7 +66,7 @@ public class FullLineByTree {
                         board[row][column].setTree(board[r][c].getTree());
                         board[row][column].setPlayer(p);
                         tree = board[row][column].getTree();
-                        tree.add(row);
+                        tree.add(row+1);
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
@@ -101,7 +101,7 @@ public class FullLineByTree {
                         board[row][column].setTree(board[row][column-1].getTree());
                         board[row][column].setPlayer(p);
                         UnionTree tree = board[row][column].getTree();
-                        tree.add(row);
+                        tree.add(row+1);
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
@@ -120,7 +120,7 @@ public class FullLineByTree {
                         board[row][column].setTree(board[r][c].getTree());
                         board[row][column].setPlayer(p);
                         tree = board[row][column].getTree();
-                        tree.add(row);
+                        tree.add(row+1);
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
@@ -154,7 +154,7 @@ public class FullLineByTree {
                         board[row][column].setTree(board[row-1][column+1].getTree());
                         board[row][column].setPlayer(p);
                         UnionTree tree = board[row][column].getTree();
-                        tree.add(row);
+                        tree.add(row+1);
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
@@ -173,7 +173,7 @@ public class FullLineByTree {
                         board[row][column].setTree(board[r][c].getTree());
                         board[row][column].setPlayer(p);
                         tree = board[row][column].getTree();
-                        tree.add(row);
+                        tree.add(row+1);
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
@@ -207,7 +207,7 @@ public class FullLineByTree {
                         board[row][column].setTree(board[row+1][column].getTree());
                         board[row][column].setPlayer(p);
                         UnionTree tree = board[row][column].getTree();
-                        tree.add(row);
+                        tree.add(row+1);
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
@@ -226,7 +226,7 @@ public class FullLineByTree {
                         board[row][column].setTree(board[r][c].getTree());
                         board[row][column].setPlayer(p);
                         tree = board[row][column].getTree();
-                        tree.add(row);
+                        tree.add(row+1);
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
@@ -253,20 +253,20 @@ public class FullLineByTree {
                     }
                 }
             }
-            if (row + 1 < size && column + 1 < size) {
-                if(board[row+1][column+1].getPlayer()==p){
-                    if(!foundTree && !board[row][column].getTree().replaced){
-                        board[row][column].setTreeName(board[row+1][column+1].getTreeName());
-                        board[row][column].setTree(board[row+1][column+1].getTree());
+            if (row + 1 < size && column - 1 >= 0) {
+                if(board[row+1][column-1].getPlayer()==p){
+                    if(!foundTree && !board[row+1][column-1].getTree().replaced){
+                        board[row][column].setTreeName(board[row+1][column-1].getTreeName());
+                        board[row][column].setTree(board[row+1][column-1].getTree());
                         board[row][column].setPlayer(p);
                         UnionTree tree = board[row][column].getTree();
-                        tree.add(row);
+                        tree.add(row+1);
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
-                    else if(!foundTree && board[row+1][column+1].getTree().replaced){
+                    else if(!foundTree && board[row+1][column-1].getTree().replaced){
                         int r = row+1;
-                        int c = column+1;
+                        int c = column-1;
                         UnionTree tree = board[r][c].getTree();
                         boolean found = false;
                         while(!found){
@@ -279,16 +279,16 @@ public class FullLineByTree {
                         board[row][column].setTree(board[r][c].getTree());
                         board[row][column].setPlayer(p);
                         tree = board[row][column].getTree();
-                        tree.add(row);
+                        tree.add(row+1);
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
                     else{
-                        if(board[row][column].getTree().row == board[row+1][column+1].getTree().row
-                                && board[row][column].getTree().column == (board[row+1][column+1].getTree().column)){}
+                        if(board[row][column].getTree().row == board[row+1][column-1].getTree().row
+                                && board[row][column].getTree().column == (board[row+1][column-1].getTree().column)){}
                         else{
                             int r = row+1;
-                            int c = column+1;
+                            int c = column-1;
                             UnionTree tree = board[r][c].getTree();
                             boolean found = !tree.replaced;
                             while(!found){
@@ -313,7 +313,7 @@ public class FullLineByTree {
                         board[row][column].setTree(board[row][column+1].getTree());
                         board[row][column].setPlayer(p);
                         UnionTree tree = board[row][column].getTree();
-                        tree.add(row);
+                        tree.add(row+1);
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
@@ -332,7 +332,7 @@ public class FullLineByTree {
                         board[row][column].setTree(board[r][c].getTree());
                         board[row][column].setPlayer(p);
                         tree = board[row][column].getTree();
-                        tree.add(row);
+                        tree.add(row+1);
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
@@ -368,7 +368,7 @@ public class FullLineByTree {
                     board[row][column].setTree(board[row-1][column].getTree());
                     board[row][column].setPlayer(p);
                     UnionTree tree = board[row][column].getTree();
-                    tree.add(row);
+                    tree.add(column+1);
                     foundTree = true;
                     if(tree.haveAWinner()){return true;}
                 }
@@ -387,7 +387,7 @@ public class FullLineByTree {
                     board[row][column].setTree(board[r][c].getTree());
                     board[row][column].setPlayer(p);
                     tree = board[row][column].getTree();
-                    tree.add(row);
+                    tree.add(column+1);
                     foundTree = true;
                     if(tree.haveAWinner()){return true;}
                 }
@@ -421,7 +421,7 @@ public class FullLineByTree {
                         board[row][column].setTree(board[row][column-1].getTree());
                         board[row][column].setPlayer(p);
                         UnionTree tree = board[row][column].getTree();
-                        tree.add(row);
+                        tree.add(column+1);
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
@@ -440,7 +440,7 @@ public class FullLineByTree {
                         board[row][column].setTree(board[r][c].getTree());
                         board[row][column].setPlayer(p);
                         tree = board[row][column].getTree();
-                        tree.add(row);
+                        tree.add(column+1);
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
@@ -474,7 +474,7 @@ public class FullLineByTree {
                         board[row][column].setTree(board[row-1][column+1].getTree());
                         board[row][column].setPlayer(p);
                         UnionTree tree = board[row][column].getTree();
-                        tree.add(row);
+                        tree.add(column+1);
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
@@ -493,7 +493,7 @@ public class FullLineByTree {
                         board[row][column].setTree(board[r][c].getTree());
                         board[row][column].setPlayer(p);
                         tree = board[row][column].getTree();
-                        tree.add(row);
+                        tree.add(column+1);
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
@@ -527,7 +527,7 @@ public class FullLineByTree {
                         board[row][column].setTree(board[row+1][column].getTree());
                         board[row][column].setPlayer(p);
                         UnionTree tree = board[row][column].getTree();
-                        tree.add(row);
+                        tree.add(column+1);
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
@@ -546,7 +546,7 @@ public class FullLineByTree {
                         board[row][column].setTree(board[r][c].getTree());
                         board[row][column].setPlayer(p);
                         tree = board[row][column].getTree();
-                        tree.add(row);
+                        tree.add(column+1);
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
@@ -573,20 +573,20 @@ public class FullLineByTree {
                     }
                 }
             }
-            if (row + 1 < size && column + 1 < size) {
-                if(board[row+1][column+1].getPlayer()==p){
-                    if(!foundTree && !board[row+1][column+1].getTree().replaced){
-                        board[row][column].setTreeName(board[row+1][column+1].getTreeName());
-                        board[row][column].setTree(board[row+1][column+1].getTree());
+            if (row + 1 < size && column - 1 >= 0) {
+                if(board[row+1][column-1].getPlayer()==p){
+                    if(!foundTree && !board[row+1][column-1].getTree().replaced){
+                        board[row][column].setTreeName(board[row+1][column-1].getTreeName());
+                        board[row][column].setTree(board[row+1][column-1].getTree());
                         board[row][column].setPlayer(p);
                         UnionTree tree = board[row][column].getTree();
-                        tree.add(row);
+                        tree.add(column+1);
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
-                    else if(!foundTree && board[row+1][column+1].getTree().replaced){
+                    else if(!foundTree && board[row+1][column-1].getTree().replaced){
                         int r = row+1;
-                        int c = column+1;
+                        int c = column-1;
                         UnionTree tree = board[r][c].getTree();
                         boolean found = false;
                         while(!found){
@@ -599,16 +599,16 @@ public class FullLineByTree {
                         board[row][column].setTree(board[r][c].getTree());
                         board[row][column].setPlayer(p);
                         tree = board[row][column].getTree();
-                        tree.add(row);
+                        tree.add(column+1);
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
                     else{
-                        if(board[row][column].getTree().row == board[row+1][column+1].getTree().row
-                                && board[row][column].getTree().column == (board[row+1][column+1].getTree().column)){}
+                        if(board[row][column].getTree().row == board[row+1][column-1].getTree().row
+                                && board[row][column].getTree().column == (board[row+1][column-1].getTree().column)){}
                         else{
                             int r = row+1;
-                            int c = column+1;
+                            int c = column-1;
                             UnionTree tree = board[r][c].getTree();
                             boolean found = !tree.replaced;
                             while(!found){
@@ -633,7 +633,7 @@ public class FullLineByTree {
                         board[row][column].setTree(board[row][column+1].getTree());
                         board[row][column].setPlayer(p);
                         UnionTree tree = board[row][column].getTree();
-                        tree.add(row);
+                        tree.add(column+1);
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
@@ -652,7 +652,7 @@ public class FullLineByTree {
                         board[row][column].setTree(board[r][c].getTree());
                         board[row][column].setPlayer(p);
                         tree = board[row][column].getTree();
-                        tree.add(row);
+                        tree.add(column+1);
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
