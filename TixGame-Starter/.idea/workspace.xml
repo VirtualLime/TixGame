@@ -175,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583410598461</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added different method to get to a winner... work in progress.">
+      <created>1583412204657</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1583412204657</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,6 +202,7 @@
     <MESSAGE value="Very small changes. First required method working, algorithm started on paper." />
     <MESSAGE value="added some new classes and methods to determine if a winning solution had been achieved. Not the correct solution." />
     <MESSAGE value="Possible fixed &quot;winning&quot; mechanism" />
-    <option name="LAST_COMMIT_MESSAGE" value="Possible fixed &quot;winning&quot; mechanism" />
+    <MESSAGE value="Added different method to get to a winner... work in progress." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added different method to get to a winner... work in progress." />
   </component>
 </project>

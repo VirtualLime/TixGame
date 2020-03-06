@@ -3,12 +3,13 @@
  */
 public class UnionTree {
     private int[] spot;
-    int count, parent,size, row, column;
+    int count, parent,size, row, column, player;
     String replacement;
     boolean replaced;
 
 
-    public UnionTree(int s, int r, int c, int p){
+    public UnionTree(int s, int r, int c, int p, int pl){
+        player = pl;
         parent = p;
         count = 0;
         size = s;
@@ -33,6 +34,7 @@ public class UnionTree {
         replaced = true;
     }
     public int getParent(){return parent;}
+    public int getPlayer(){return  parent;}
 
     public int[] getArray(){return spot;}
 
@@ -65,13 +67,22 @@ public class UnionTree {
         if(spot[n-1] == 0){
             spot [n-1] = n;
             count++;
+            System.out.println("count: " + count);
         }
     }
 
     public boolean haveAWinner(){
-        System.out.println("count: " + count);
+        System.out.println("count: " + count);printArray();
         if(count == size){System.out.println("Winner!");return true;}
         return false;
+    }
+
+    private void printArray(){
+        for(int i = 0; i < size; i++){
+            int n = spot[i];
+            System.out.print(n + " ");
+        }
+        System.out.println();
     }
 
 }
