@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e9cf7966-73bb-4231-94ec-7a2c7c44fb17" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TixGame-Starter/GameModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TixGame-Starter/GameModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FullLineByTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FullLineByTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Triple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Triple.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UnionTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnionTree.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,7 +55,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GameDriver">
+  <component name="RunManager" selected="JUnit.Tests">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -110,8 +113,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GameDriver" />
         <item itemvalue="JUnit.Tests" />
+        <item itemvalue="Application.GameDriver" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583510255531</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Winner appears to work, not looking to increase efficiency.">
+      <created>1583533464370</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1583533464370</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,6 +220,7 @@
     <MESSAGE value="added some new classes and methods to determine if a winning solution had been achieved. Not the correct solution." />
     <MESSAGE value="Possible fixed &quot;winning&quot; mechanism" />
     <MESSAGE value="Added different method to get to a winner... work in progress." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added different method to get to a winner... work in progress." />
+    <MESSAGE value="Winner appears to work, not looking to increase efficiency." />
+    <option name="LAST_COMMIT_MESSAGE" value="Winner appears to work, not looking to increase efficiency." />
   </component>
 </project>

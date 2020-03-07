@@ -15,6 +15,9 @@ public class FullLineByTree {
         fillnames();
     }
 
+
+    public Triple[][] getArray(){return board;}
+
     private void fillnames(){
         for(int i = 0; i < trees; i++){
             String name = "a" + i;
@@ -39,10 +42,10 @@ public class FullLineByTree {
         boolean foundTree = false;
         if(p == -1) {
             if (row - 1 >= 0) {
-                System.out.println("p: " + p + " compared p: " + board[row-1][column].getPlayer());
+                //System.out.println("p: " + p + " compared p: " + board[row-1][column].getPlayer());
                 if(board[row-1][column].getPlayer()==p){
-                    System.out.println(board[row-1][column].getTree().checkIfReplaces());
-                    if(!foundTree && !board[row-1][column].getTree().checkIfReplaces()){System.out.println("1a");
+                    //System.out.println(board[row-1][column].getTree().checkIfReplaces());
+                    if(!foundTree && !board[row-1][column].getTree().checkIfReplaces()){//System.out.println("1a");
                         board[row][column].setTreeName(board[row-1][column].getTreeName());
                         board[row][column].setTree(board[row-1][column].getTree());
                         board[row][column].setPlayer(p);
@@ -51,7 +54,7 @@ public class FullLineByTree {
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
-                    else if(!foundTree && board[row-1][column].getTree().checkIfReplaces()){System.out.println("1b");
+                    else if(!foundTree && board[row-1][column].getTree().checkIfReplaces()){//System.out.println("1b");
                         int r = row-1;
                         int c = column;
                         UnionTree tree = board[r][c].getTree();
@@ -73,7 +76,7 @@ public class FullLineByTree {
                     else{
                         if(board[row][column].getTree().row == board[row-1][column].getTree().row
                             && board[row][column].getTree().column == (board[row-1][column].getTree().column)){}
-                        else{System.out.println("1c");
+                        else{//System.out.println("1c");
                             int r = row-1;
                             int c = column;
                             UnionTree tree = board[r][c].getTree();
@@ -96,7 +99,7 @@ public class FullLineByTree {
             }
             if (column - 1 >= 0) {
                 if(board[row][column-1].getPlayer()==p){
-                    if(!foundTree && !board[row][column-1].getTree().replaced){System.out.println("2a");
+                    if(!foundTree && !board[row][column-1].getTree().replaced){//System.out.println("2a");
                         board[row][column].setTreeName(board[row][column-1].getTreeName());
                         board[row][column].setTree(board[row][column-1].getTree());
                         board[row][column].setPlayer(p);
@@ -105,7 +108,7 @@ public class FullLineByTree {
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
-                    else if(!foundTree && board[row][column-1].getTree().replaced){System.out.println("2b");
+                    else if(!foundTree && board[row][column-1].getTree().replaced){//System.out.println("2b");
                         int r = row;
                         int c = column-1;
                         UnionTree tree = board[r][c].getTree();
@@ -127,7 +130,7 @@ public class FullLineByTree {
                     else{
                         if(board[row][column].getTree().row == board[row][column-1].getTree().row
                                 && board[row][column].getTree().column == (board[row][column-1].getTree().column)){}
-                        else{System.out.println("2c");
+                        else{//System.out.println("2c");
                             int r = row;
                             int c = column-1;
                             UnionTree tree = board[r][c].getTree();
@@ -149,7 +152,7 @@ public class FullLineByTree {
             }
             if (row - 1 >= 0 && column + 1 < size) {
                 if(board[row-1][column+1].getPlayer()==p){
-                    if(!foundTree && !board[row-1][column+1].getTree().replaced){System.out.println("3a");
+                    if(!foundTree && !board[row-1][column+1].getTree().replaced){//System.out.println("3a");
                         board[row][column].setTreeName(board[row-1][column+1].getTreeName());
                         board[row][column].setTree(board[row-1][column+1].getTree());
                         board[row][column].setPlayer(p);
@@ -158,7 +161,7 @@ public class FullLineByTree {
                         foundTree = true;
                         if(tree.haveAWinner()){return true;}
                     }
-                    else if(!foundTree && board[row-1][column+1].getTree().replaced){System.out.println("3b");
+                    else if(!foundTree && board[row-1][column+1].getTree().replaced){//System.out.println("3b");
                         int r = row-1;
                         int c = column+1;
                         UnionTree tree = board[r][c].getTree();
@@ -180,7 +183,7 @@ public class FullLineByTree {
                     else{
                         if(board[row][column].getTree().row == board[row-1][column+1].getTree().row
                                 && board[row][column].getTree().column == (board[row-1][column+1].getTree().column)){}
-                        else{System.out.println("3c");
+                        else{//System.out.println("3c");
                             int r = row-1;
                             int c = column+1;
                             UnionTree tree = board[r][c].getTree();

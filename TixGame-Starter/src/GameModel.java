@@ -4,9 +4,10 @@
  * You should implement the public interface methods below
  */
 public class GameModel {
-    private int[][] board;
+    //private int[][] board;
+    private Triple[][] board;
     private int length;
-    //private FullLine fullLine;
+    private FullLine fullLine;
     private FullLineByTree fullLineByTree;
 
     /**
@@ -15,20 +16,21 @@ public class GameModel {
      */
     public GameModel(int sz) {
         length  = sz;
-        board = new int [sz][sz];
-        emptyBoard(sz);
+        //board = new int [sz][sz];
+        //emptyBoard(sz);
         //fullLine = new FullLine(length);
         fullLineByTree = new FullLineByTree(length);
+        board = fullLineByTree.getArray();
 
     }
 
     private void emptyBoard(int size){
         for(int i = 0; i<size; i++){
             for(int m = 0; m < size; m++){
-                board[i][m] = 0;
+                //board[i][m] = 0;
             }
         }
-        printBoard();
+        //printBoard();
     }
 
 
@@ -39,7 +41,7 @@ public class GameModel {
      * @return true if row, col is empty, false o.w.
      */
     public boolean canPlay(int row, int col) {
-        int spot = board[row][col];
+        int spot = board[row][col].getPlayer();
         if(spot == 0){return true;}
 
         //placeholder
@@ -54,8 +56,9 @@ public class GameModel {
      * @return true if the game is over and false otherwise
      */
     public boolean makePlay(int row, int col, int player) {
-        board[row][col] = player;
-        printBoard();
+        //board[row][col] = player;
+        //board[row][col].getPlayer() = player;
+        //printBoard();
 
         //return fullLine.makeMove(player, col, row);
         return fullLineByTree.makeMove(player,col,row);
@@ -72,8 +75,8 @@ public class GameModel {
     private void printBoard() {
         for(int i = 0; i < length; i++){
             for(int m = 0; m < length; m++){
-                int spot = board[i][m];
-                System.out.print(spot + " ");
+                //int spot = board[i][m];
+                //System.out.print(spot + " ");
             }
             System.out.println();
         }

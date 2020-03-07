@@ -68,13 +68,13 @@ public class UnionTree {
         if(spot[n-1] == 0){
             spot [n-1] = n;
             count++;
-            System.out.println("count: " + count);
+            //System.out.println("count: " + count);
         }
     }
 
     public boolean haveAWinner(){
-        System.out.println("count: " + count);printArray();
-        if(count == size){System.out.println("Winner!");return true;}
+        //System.out.println("count: " + count);printArray();
+        if(count == size){return true;}
         return false;
     }
 

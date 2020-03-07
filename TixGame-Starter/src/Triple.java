@@ -11,6 +11,7 @@ public class Triple {
         present = false;
     }
 
+
     public int getPlayer(){return player;}
     public String getTreeName(){return treeName;}
     public void setPlayer(int p){player = p;}
