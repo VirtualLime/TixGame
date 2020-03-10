@@ -52,7 +52,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GameDriver">
+  <component name="RunManager" selected="JUnit.Tests">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -110,8 +110,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GameDriver" />
         <item itemvalue="JUnit.Tests" />
+        <item itemvalue="Application.GameDriver" />
       </list>
     </recent_temporary>
   </component>
@@ -210,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583801865135</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Altered method for changing position information. Bugs appear to be fixed. Commenting out some code.">
+      <created>1583877505903</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1583877505903</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -234,6 +241,7 @@
     <MESSAGE value="Winner appears to work, not looking to increase efficiency." />
     <MESSAGE value="Winner appears to work, now looking to increase efficiency." />
     <MESSAGE value="Altered method for changing position information. Working on fixing bugs." />
-    <option name="LAST_COMMIT_MESSAGE" value="Altered method for changing position information. Working on fixing bugs." />
+    <MESSAGE value="Altered method for changing position information. Bugs appear to be fixed. Commenting out some code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Altered method for changing position information. Bugs appear to be fixed. Commenting out some code." />
   </component>
 </project>

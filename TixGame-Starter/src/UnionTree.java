@@ -69,16 +69,17 @@ public class UnionTree {
     }
 
     public boolean addToArray(int n){
-        System.out.println("n: " + n);
+        //System.out.println("n: " + n);
         if(full){return full;}
         if(spot[n-1] == 0){
             spot [n-1] = n;
             count++;
-            System.out.println(count);
+            //System.out.println(count);
+            //printArray();
 
             if(count == size){
                 full = true;
-                System.out.println("win");
+                //System.out.println("win");
                 return full;
             }
             //System.out.println("count: " + count);
