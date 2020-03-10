@@ -5,7 +5,7 @@ public class UnionTree {
     private int[] spot;
     int count, parent,size, row, column, player;
     String replacement;
-    boolean replaced;
+    boolean replaced, full;
 
 
     public UnionTree(int s, int r, int c, int p, int pl){
@@ -19,13 +19,16 @@ public class UnionTree {
         row = r;
         column = c;
         spot[p-1] = p;
+        full = false;
     }
 
-    public void addArray(int[] arr){
+    public boolean addArray(int[] arr){
         for(int i = 0; i < arr.length; i++){
             int j = arr[i];
-            add(j);
+            addToArray(j);
+            if(full){return full;}
         }
+        return full;
     }
 
     public boolean checkIfReplaces(){return replaced;}
@@ -39,20 +42,21 @@ public class UnionTree {
 
     public int[] getArray(){return spot;}
 
-    public void add(int n){
-        if(n == 0){return;}
-        if(parent == 0){
+    public boolean add(int n){
+        if(full){return full;}
+        if(n == 0){return false;}
+        /*if(parent == 0){
             parent = n;
             addToArray(parent);
         }
-        else if(parent > n){
+        /*else if(parent > n){
             int temp = parent;
             parent = n;
             addToArray(parent);
             add(temp);
-        }
-        else if(parent < n){
-            addToArray(n);
+        }*/
+        else{//}{
+            return addToArray(n);
         }
     }
 
@@ -64,18 +68,29 @@ public class UnionTree {
         replaced = true;
     }
 
-    private void addToArray(int n){
+    public boolean addToArray(int n){
+        if(full){return full;}
         if(spot[n-1] == 0){
             spot [n-1] = n;
             count++;
+            System.out.println(count);
+
+            if(count == size){
+                full = true;
+                System.out.println("win");
+                return full;
+            }
             //System.out.println("count: " + count);
         }
+        //if(count == size){full = true;}
+        return full;
     }
 
     public boolean haveAWinner(){
         //System.out.println("count: " + count);printArray();
-        if(count == size){return true;}
-        return false;
+        /*if(count == size){return true;}
+        return false;*/
+        return full;
     }
 
     private void printArray(){

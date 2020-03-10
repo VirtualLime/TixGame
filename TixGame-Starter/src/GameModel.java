@@ -61,7 +61,8 @@ public class GameModel {
         //printBoard();
 
         //return fullLine.makeMove(player, col, row);
-        return fullLineByTree.makeMove(player,col,row);
+        //return fullLineByTree.makeMove(player,col,row);
+        return fullLineByTree.makeMove(row, col, player);
 
         //placeholder
         //return false;
