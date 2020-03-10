@@ -25,7 +25,7 @@ public class UnionTree {
     public boolean addArray(int[] arr){
         for(int i = 0; i < arr.length; i++){
             int j = arr[i];
-            addToArray(j);
+            if(j>0){addToArray(j );}
             if(full){return full;}
         }
         return full;
@@ -69,6 +69,7 @@ public class UnionTree {
     }
 
     public boolean addToArray(int n){
+        System.out.println("n: " + n);
         if(full){return full;}
         if(spot[n-1] == 0){
             spot [n-1] = n;

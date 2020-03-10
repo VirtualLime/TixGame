@@ -57,8 +57,8 @@ public class FullLineByTree {
                 infoTriple = board[r][c];
                 int comparedPlayer = infoTriple.getPlayer();
                 infoTree = infoTriple.getTree();
-                if(comparedPlayer == 0 || comparedPlayer == -p){}
-                else{
+                //if(comparedPlayer == 0 || comparedPlayer == -p){}
+                if(comparedPlayer == p){
                     if(!foundTree && !infoTree.checkIfReplaces()){
                         //infoTriple.setTreeName(board[row-1][column].getTreeName());
                         triple.setTree(infoTree);
@@ -67,6 +67,7 @@ public class FullLineByTree {
                         done = tree.addToArray(alter);
                         if(done){return true;}
                         foundTree = true;
+                        System.out.println("first section");
                     }
                     else if(!foundTree && infoTree.checkIfReplaces()){//System.out.println("1b");
                         int r1 = r;
@@ -75,10 +76,11 @@ public class FullLineByTree {
                         //UnionTree tree = infoTriple.getTree();
                         boolean found = false;
                         while(!found){
-                            r1 = tree.row;
-                            c1 = tree.column;
+                            r1 = tempTree.row;
+                            c1 = tempTree.column;
                             tempTree = board[r1][c1].getTree();
                             found = !tree.replaced;
+                            System.out.println("in loop");
                         }
                         //triple.setTreeName(board[r][c].getTreeName());
                         triple.setTree(board[r1][c1].getTree());
@@ -88,20 +90,23 @@ public class FullLineByTree {
                         if(done){return true;}
                         foundTree = true;
                         //if(tree.haveAWinner()){return true;}
+                        System.out.println("second section");
                     }
                     else{
                         if(tree.row == infoTree.row
                                 && tree.column == infoTree.column){}
                         else{
+                            System.out.println("third section");
                             int r1 = row-1;
                             int c1 = column;
                             UnionTree tempTree = infoTree;
                             boolean found = tree.checkIfReplaces();
                             while(!found){
-                                r1 = tree.row;
-                                c1 = tree.column;
+                                r1 = tempTree.row;
+                                c1 = tempTree.column;
                                 tempTree = board[r1][c1].getTree();
-                                found = tree.checkIfReplaces();
+                                found = !tempTree.checkIfReplaces();
+                                System.out.println("in loop");
                             }
                             //UnionTree thisTree = triple.getTree();
                             tree.replaceRC(r1,c1);
@@ -114,6 +119,7 @@ public class FullLineByTree {
                     }
                 }
             }
+            System.out.println("case: " + count);
             switch(count){
                 case 5:
                     count = 6;
@@ -143,7 +149,7 @@ public class FullLineByTree {
                 case 0:
                     count = 1;
                     r = row;
-                    c = column + 1;
+                    c = column - 1;
                     break;
             }
         }

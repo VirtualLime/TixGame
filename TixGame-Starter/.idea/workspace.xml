@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e9cf7966-73bb-4231-94ec-7a2c7c44fb17" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TixGame-Starter/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TixGame-Starter/GameController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TixGame-Starter/GameModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TixGame-Starter/GameModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FullLineByTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FullLineByTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UnionTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnionTree.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -207,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583539990451</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Altered method for changing position information. Working on fixing bugs.">
+      <created>1583801865135</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1583801865135</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -230,6 +233,7 @@
     <MESSAGE value="Added different method to get to a winner... work in progress." />
     <MESSAGE value="Winner appears to work, not looking to increase efficiency." />
     <MESSAGE value="Winner appears to work, now looking to increase efficiency." />
-    <option name="LAST_COMMIT_MESSAGE" value="Winner appears to work, now looking to increase efficiency." />
+    <MESSAGE value="Altered method for changing position information. Working on fixing bugs." />
+    <option name="LAST_COMMIT_MESSAGE" value="Altered method for changing position information. Working on fixing bugs." />
   </component>
 </project>
