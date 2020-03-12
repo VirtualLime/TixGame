@@ -1,19 +1,24 @@
-public class Pair {
-    private int player;
-    private int spot;
+public class Pair {private int player;
+    private UnionTree tree;
+    boolean present;
 
-    public Pair(int p, int s){
+    public Pair(int p, UnionTree t){
         player = p;
-        spot = s;
+        tree = t;
+        present = false;
     }
 
+
     public int getPlayer(){return player;}
-    public int getSpot(){return spot;}
     public void setPlayer(int p){player = p;}
-    public void setSpot(int s){spot = s;}
+    public UnionTree getTree(){return tree;}
+    public void setTree(UnionTree t){
+        present = true;
+        tree = t;
+    }
 
     public String toString(){
-        return player + " " + spot;
+        return player + " " + "tree: " + tree;
     }
 
 }

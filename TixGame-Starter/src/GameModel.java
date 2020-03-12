@@ -5,9 +5,8 @@
  */
 public class GameModel {
     //private int[][] board;
-    private Triple[][] board;
+    private Pair[][] board;
     private int length;
-    private FullLine fullLine;
     private FullLineByTree fullLineByTree;
 
     /**

@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e9cf7966-73bb-4231-94ec-7a2c7c44fb17" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TixGame-Starter/GameModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TixGame-Starter/GameModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FullLine.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FullLineByTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FullLineByTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Triple.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UnionTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnionTree.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -217,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583877505903</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Altered method for changing position information. Bugs appear to be fixed. Commenting out some code.">
+      <created>1583879337770</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1583879337770</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

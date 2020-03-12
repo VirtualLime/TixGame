@@ -45,17 +45,7 @@ public class UnionTree {
     public boolean add(int n){
         if(full){return full;}
         if(n == 0){return false;}
-        /*if(parent == 0){
-            parent = n;
-            addToArray(parent);
-        }
-        /*else if(parent > n){
-            int temp = parent;
-            parent = n;
-            addToArray(parent);
-            add(temp);
-        }*/
-        else{//}{
+        else{
             return addToArray(n);
         }
     }
@@ -69,29 +59,20 @@ public class UnionTree {
     }
 
     public boolean addToArray(int n){
-        //System.out.println("n: " + n);
         if(full){return full;}
         if(spot[n-1] == 0){
             spot [n-1] = n;
             count++;
-            //System.out.println(count);
-            //printArray();
 
             if(count == size){
                 full = true;
-                //System.out.println("win");
                 return full;
             }
-            //System.out.println("count: " + count);
         }
-        //if(count == size){full = true;}
         return full;
     }
 
     public boolean haveAWinner(){
-        //System.out.println("count: " + count);printArray();
-        /*if(count == size){return true;}
-        return false;*/
         return full;
     }
 
