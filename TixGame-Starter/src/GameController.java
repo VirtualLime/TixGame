@@ -62,7 +62,7 @@ public class GameController implements MouseListener {
     public void makeMove(Point p) {
         int col = p.x;
         int row = p.y;
-        //System.out.println("click row:" + row + " col:" + col);
+        System.out.println("click row:" + row + " col:" + col);
 
         if(model.canPlay(row, col)) {
             viewDelegate.setColor(row, col, turn);
